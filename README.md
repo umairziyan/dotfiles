@@ -1,4 +1,4 @@
-# My dotfiles
+# Umair's Dotfiles
 
 This directory contains the dotfiles for my system
 
@@ -31,4 +31,12 @@ then use GNU stow to create symlinks
 
 ```
 $ stow .
+
+If there are files already in your local .config folder, use the following command to symlink it:
+
+$ stow --adopt .
+
+this comman will overwrite everything so reset using the following command:
+
+$ git --reset hard
 ```
