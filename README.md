@@ -36,7 +36,7 @@ If there are files already in your local .config folder, use the following comma
 ```
 $ stow --adopt .
 ```
-this comman will overwrite everything so reset using the following command:
+this command will overwrite everything so reset using the following command:
 ```
 $ git --reset hard
 ```
