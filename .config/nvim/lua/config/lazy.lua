@@ -41,3 +41,12 @@ require("lazy").setup({
     },
   },
 })
+
+return {
+  {
+    "folke/which-key.nvim",
+    opts = {
+      preset = "classic",
+    },
+  },
+}
