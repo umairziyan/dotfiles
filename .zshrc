@@ -76,6 +76,9 @@ alias ls='ls --color'
 alias vim='nvim'
 alias c='clear'
 
+#export
+export EDITOR='nvim'
+
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
