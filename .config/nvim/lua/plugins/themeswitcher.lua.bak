@@ -1,0 +1,43 @@
+return {
+  {
+    "luxus/colorful-times-nvim",
+    dependencies = { "nvim-lua/plenary.nvim" }, -- Only needed for running tests
+    config = function()
+      require("colorful-times").setup({
+        -- Schedule entries for when to change colorschemes
+        schedule = {
+          {
+            start = "08:00", -- 8 AM
+            stop = "18:00", -- 6 PM
+            colorscheme = "gruvbox", -- your light colorscheme
+            background = "dark", -- optional: "light", "dark", or "system"
+          },
+          {
+            start = "18:00", -- 6 PM
+            stop = "08:00", -- 8 AM (next day)
+            colorscheme = "gruvbox", -- your dark colorscheme
+            background = "dark", -- optional
+          },
+        },
+
+        -- Default settings when no schedule is active
+        default = {
+          colorscheme = "default", -- fallback colorscheme
+          background = "system", -- "light", "dark", or "system" to follow OS settings
+          themes = {
+            light = "gruvbox", -- specific theme for light mode (nil to use default)
+            dark = "gruvbox", -- specific theme for dark mode (nil to use default)
+          },
+        },
+
+        -- Other options
+        enabled = true, -- enable/disable the plugin
+        refresh_time = 5000, -- check system appearance every 5 seconds (in ms)
+
+        -- Optional: custom command for Linux system background detection
+        -- KDE and GNOME are auto-detected, only needed for other desktop environments
+        -- system_background_detection = "custom-script-or-command-that-returns-exit-code-0-for-dark"
+      })
+    end,
+  },
+}

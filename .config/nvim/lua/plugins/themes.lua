@@ -1,3 +1,3 @@
 return { {
   "NLKNguyen/papercolor-theme",
-}, { "rebelot/kanagawa.nvim" } }
+}, { "rebelot/kanagawa.nvim" }, { "sainnhe/gruvbox-material" } }
